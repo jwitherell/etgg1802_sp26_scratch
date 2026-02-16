@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cpei8a1jf72wb"]
+
+[ext_resource type="PackedScene" uid="uid://bb1m0iiical25" path="res://scenes/player_circle.tscn" id="1_k3vsp"]
+[ext_resource type="Texture2D" uid="uid://chpyqlcfh8nfy" path="res://image/red_circle.png" id="2_6o3ov"]
+[ext_resource type="Script" uid="uid://bhufwndap7d6v" path="res://scenes/super_player_circle.gd" id="2_8yafy"]
+
+[node name="super_circle" unique_id=228550197 instance=ExtResource("1_k3vsp")]
+script = ExtResource("2_8yafy")
+
+[node name="small_circle" type="Sprite2D" parent="." index="2" unique_id=537582029]
+position = Vector2(-48, -62)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_6o3ov")
+
+[node name="small_circle2" type="Sprite2D" parent="." index="3" unique_id=1103546404]
+position = Vector2(45, -62)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_6o3ov")
+
+[node name="Timer" type="Timer" parent="." index="4" unique_id=2012059934]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

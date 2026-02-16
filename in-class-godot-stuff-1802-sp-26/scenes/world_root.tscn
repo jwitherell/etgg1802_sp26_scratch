@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://c52r134ahflmd"]
+
+[ext_resource type="PackedScene" uid="uid://bb1m0iiical25" path="res://scenes/player_circle.tscn" id="1_ycrkx"]
+[ext_resource type="PackedScene" uid="uid://cpei8a1jf72wb" path="res://scenes/super_player_circle.tscn" id="2_psreq"]
+[ext_resource type="PackedScene" uid="uid://cvgit0m7vgeh0" path="res://scenes/enemy.tscn" id="3_t21ho"]
+
+[node name="world_root" type="Node2D" unique_id=577856229]
+
+[node name="player_circle" parent="." unique_id=228550197 instance=ExtResource("1_ycrkx")]
+visible = false
+position = Vector2(534, 264)
+
+[node name="player_circle2" parent="." unique_id=2034557506 instance=ExtResource("2_psreq")]
+position = Vector2(250, 222)
+
+[node name="enemy" parent="." unique_id=1878317245 node_paths=PackedStringArray("target") instance=ExtResource("3_t21ho")]
+position = Vector2(144, 474)
+target = NodePath("../player_circle2")
+
+[node name="enemy2" parent="." unique_id=1308242219 node_paths=PackedStringArray("target") instance=ExtResource("3_t21ho")]
+position = Vector2(952, 111)
+target = NodePath("../player_circle2")
+
+[node name="enemy3" parent="." unique_id=1767146439 node_paths=PackedStringArray("target") instance=ExtResource("3_t21ho")]
+position = Vector2(-81, -141)
+target = NodePath("../player_circle2")
