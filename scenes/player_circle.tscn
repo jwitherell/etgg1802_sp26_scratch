@@ -15,3 +15,12 @@ texture = ExtResource("1_ssqfj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=784521108]
 shape = SubResource("CircleShape2D_2mbnp")
+
+[node name="pivot_node" type="Node2D" parent="." unique_id=933698663]
+
+[node name="aim_spot" type="Sprite2D" parent="pivot_node" unique_id=938842816]
+modulate = Color(0.35686275, 1, 0.23137255, 1)
+self_modulate = Color(0.6745098, 0.58431375, 0.08235294, 1)
+position = Vector2(108.99999, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ssqfj")
